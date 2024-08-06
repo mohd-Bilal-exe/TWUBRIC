@@ -13,7 +13,7 @@ export default function UserCard({ Key, follower, handleRemove, isExpanded, onEx
             whileHover={{ scale: 1.005 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className={`p-4  ${view === "list" ? "w-[520px]" : "w-80"} bg-gradient-to-tl ${darkMode
+            className={`p-4  ${view === "list" ? "w-[520px] xs:w-10/12" : "w-80"} bg-gradient-to-tl ${darkMode
                 ? "from-foreground to-Lightcopy-lighter/30 text-copy"
                 : "from-foreground/10 to-foreground/20 text-copyLight"
                 } rounded-lg shadow-md flex flex-col items-center justify-between overflow-hidden cursor-pointer place-self-center transition-colors duration-300`}
