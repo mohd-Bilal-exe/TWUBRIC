@@ -2,19 +2,19 @@
 
 Welcome to TWUBRIC! This is a web application designed to showcase a collection of tools and resources. Developed using React.js and Node.js, this project demonstrates my skills in frontend development, backend integration, and overall web application design.
 
+[Visit Twubric](https://tw-ubric.netlify.app)
+
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Setup Instructions](#setup-instructions)
-- [Live Demo](#live-demo)
-- [Contributing](#contributing)
-- [License](#license)
+- [Installation](#Installation)
 
 ## Project Overview
 
-TWUBRIC is a versatile web application that integrates various tools and functionalities to provide a comprehensive user experience. It features a responsive and modern interface built with React.js, with backend services powered by Node.js.
+TWUBRIC is a versatile web application that integrates various tools and functionalities to provide a comprehensive user experience. It features a responsive and modern interface built with React.js, tailwindCSS and framer-motion.
 
 ## Features
 
