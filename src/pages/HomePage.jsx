@@ -96,7 +96,7 @@ export default function HomePage({ darkMode }) {
                 clearSort={clearSort}
             />
             <ViewChanger setView={setView} page={page} setPage={setPage} totalPages={totalPages} darkMode={darkMode} setItemsPerPage={setItemsPerPage} />
-            {filteredFollowers.length === 0 && <div className={`w-full h-full flex items-center justify-center text-xl text-copy`}>No Users</div>}
+            {filteredFollowers.length === 0 && <div className={`w-full h-full flex items-center justify-center text-xl ${darkMode ? "text-copy" : "text-copyLight"}`}>No Users</div>}
             <div className={`py-10 ${view === "grid" ? "flex flex-wrap gap-10 items-center justify-center" : "flex gap-3 flex-col items-center"} w-screen h-full overflow-hidden`}>
                 {filteredFollowers.slice(page * itemsPerPage, (page + 1) * itemsPerPage).map(follower => (
                     <UserCard
