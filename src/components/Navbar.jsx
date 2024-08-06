@@ -4,7 +4,8 @@ import { motion } from "framer-motion"
 export default function Navbar({ setDarkMode, darkMode }) {
 
     return (
-        <div className={`w-full flex justify-end pr-10 py-2 ${darkMode ? " bg-foreground" : " bg-foreground/10"}`}>
+        <div className={`w-full flex justify-between pr-10 py-2 ${darkMode ? " bg-foreground text-copy" : "text-copyLight bg-foreground/10"} transition-colors duration-300`}>
+            <h1 className={`ml-6 font-bold `}>TWUBRIC</h1>
             <button onClick={() => setDarkMode((prv) => !prv)}
                 className={`w-12 p-1  flex ${darkMode ? " text-copyLight bg-foregroundLight/10 justify-end" : " text-copyLight bg-foreground/10  justify-start"} rounded-2xl transition-colors`} >
                 <motion.div layout

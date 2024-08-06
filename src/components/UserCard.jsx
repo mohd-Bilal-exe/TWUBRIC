@@ -16,7 +16,7 @@ export default function UserCard({ Key, follower, handleRemove, isExpanded, onEx
             className={`p-4  ${view === "list" ? "w-[520px]" : "w-80"} bg-gradient-to-tl ${darkMode
                 ? "from-foreground to-Lightcopy-lighter/30 text-copy"
                 : "from-foreground/10 to-foreground/20 text-copyLight"
-                } rounded-lg shadow-md flex flex-col items-center justify-between overflow-hidden cursor-pointer place-self-center`}
+                } rounded-lg shadow-md flex flex-col items-center justify-between overflow-hidden cursor-pointer place-self-center transition-colors duration-300`}
             onClick={view === "list" ? onExpand : null}
         >
             <div id="info" className="w-full h-fit flex gap-5 justify-between items-center">
@@ -56,7 +56,7 @@ export default function UserCard({ Key, follower, handleRemove, isExpanded, onEx
                         {formatDate(follower.join_date)}
                     </span>
                     <button
-                        className={`w-1/3 p-2 ${darkMode ? "bg-red-500/90 hover:bg-red-500" : "bg-red-500"} text-white rounded transition-all`}
+                        className={`w-1/3 p-2 ${darkMode ? "bg-red-500/80 hover:bg-red-500" : "bg-red-500"} text-white rounded transition-colors duration-300`}
                         onClick={(e) => {
                             e.stopPropagation();
                             handleRemove(follower.uid);

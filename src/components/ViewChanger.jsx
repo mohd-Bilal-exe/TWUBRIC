@@ -15,7 +15,7 @@ export default function ViewChanger({ setView, page, setPage, totalPages, darkMo
     };
 
     return (
-        <section className={`w-screen px-8 flex justify-between h-fit pb-2 ${darkMode ? "text-copy bg-foreground" : "text-copyLight bg-foreground/10"}`}>
+        <section className={`w-screen px-8 flex justify-between h-fit pb-2 ${darkMode ? "text-copy bg-foreground" : "text-copyLight bg-foreground/10"} transition-colors duration-300`}>
             <div className="flex flex-col justify-center items-center w-fit">
                 <h1>View</h1>
                 <div className="flex gap-1 flex-row justify-center items-center w-fit">

@@ -8,3 +8,17 @@ h3 {
 #prop > p > h1 {
   @apply text-lg font-medium ml-0.5;
 }
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+button {
+  @apply tracking-tighter;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Nunito", sans-serif;
+  @apply tracking-wide;
+}

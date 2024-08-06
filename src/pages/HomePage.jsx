@@ -21,7 +21,7 @@ export default function HomePage({ darkMode }) {
             try {
                 const response = await fetch('/data.json');
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error('Error fetching data. Response was not ok');
                 }
                 const data = await response.json();
                 setFollowers(data);
@@ -82,7 +82,7 @@ export default function HomePage({ darkMode }) {
     const totalPages = Math.ceil(filteredFollowers.length / itemsPerPage);
 
     return (
-        <div className="w-screen h-full">
+        <div className="w-screen h-full overflow-x-hidden">
             <Filters
                 darkMode={darkMode}
                 fromDate={fromDate}
@@ -96,7 +96,8 @@ export default function HomePage({ darkMode }) {
                 clearSort={clearSort}
             />
             <ViewChanger setView={setView} page={page} setPage={setPage} totalPages={totalPages} darkMode={darkMode} setItemsPerPage={setItemsPerPage} />
-            <div className={`pt-10 ${view === "grid" ? "flex flex-wrap gap-10 items-center justify-center" : "flex gap-3 flex-col items-center"} w-screen h-full overflow-hidden`}>
+            {filteredFollowers.length === 0 && <div className={`w-full h-full flex items-center justify-center text-xl text-copy`}>No Users</div>}
+            <div className={`py-10 ${view === "grid" ? "flex flex-wrap gap-10 items-center justify-center" : "flex gap-3 flex-col items-center"} w-screen h-full overflow-hidden`}>
                 {filteredFollowers.slice(page * itemsPerPage, (page + 1) * itemsPerPage).map(follower => (
                     <UserCard
                         key={follower.uid}
