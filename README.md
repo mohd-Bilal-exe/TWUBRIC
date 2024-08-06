@@ -21,7 +21,7 @@ TWUBRIC is a versatile web application that integrates various tools and functio
 - **Responsive UI:** Optimized for various screen sizes and devices.
 - **Dynamic Content:** Fetches and displays content dynamically from the backend.
 - **User Interaction:** Interactive elements and smooth transitions for enhanced user experience.
-- **User Filters: ** Let's you filter users according to your needs.
+- **User Filters:** Let's you filter users according to your needs.
 
 ## Technologies Used
 
