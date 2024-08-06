@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h3 {
+  @apply text-xs;
+}
+#prop > p > h1 {
+  @apply text-lg font-medium ml-0.5;
+}
